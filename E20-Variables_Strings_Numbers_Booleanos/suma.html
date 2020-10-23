@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo suma</title>
+</head>
+<body>
+    <h1>Solicita al usuario 2 números a través de la función prompt 
+        y muestra el resultado de la suma de ambos mediante la función alert.
+    </h1>
+    <p>Para ver resultado: Abra la consola</p>
+    <script>
+        var numero1 = prompt("Ingrese 1er numero");
+        var numero2 = prompt("Ingrese 2do numero");
+
+        if(!isNaN(numero1) && !isNaN(numero2)){
+            var suma = parseInt(numero1) + parseInt(numero2);
+            alert(suma);
+        }else{
+            alert("LO SIENTO NO SE PUDO EJECUTAR LA SUMA!!!");
+        }
+
+    </script>
+</body>
+</html>
