@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos, Switch y Funciones</title>
+</head>
+
+<body>
+    <p>Abra la consola</p>
+    <!-- <script src="ciclos.js"></script>
+        <script src="switch.js"></script>
+        <script src="funciones.js"></script> -->
+
+    <!-- PSEUDO CODIGO.
+         1. Tener en constante nuestro usuario y password.
+        2. Iniciamos do while
+        3. solicitar usuario y contraseña
+        4. Llamar a funcion para comparar con los datos que tenemos en constante.
+        5. Si son iguales terminar ciclo. Sino pedir que ingrese nuevamente. 
+        6. Fin -->
+    <script>
+
+        /* Crea un ciclo del tipo do … while
+        Solicita al visitante un usuario y contraseña.
+        Crea una función para validar que los datos ingresados son correctos.
+        Si son correctos corta la ejecución del ciclo
+        Si son incorrectos vuelve a solicitar al visitante usuario y contraseña
+        */
+        const USER = "dwfs56";
+        const PASS = "fullstack";
+
+        do {
+            var usuario = prompt("Ingrese usuario");
+            var password = prompt("Ingrese contraseña");
+
+        } while (!validarUserPassword(usuario, password));
+
+        alert("Bienvenido");
+
+        function validarUserPassword(usuario, password) {
+            if (usuario === USER && password === PASS) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+
+</body>
+<!-- 
+<script>
+    // pedir datos al usuario
+    // prompt("asdfasdf")
+    // confirm("lasldf?")
+
+    // Mostrar los datos.
+    // alert("datos");
+    // console.log("sdaf"+variable);
+
+    // typeof(variable) -> devolvia el tipo de datos.
+    // !isNaN(variable) -> verifica si es numero o no.
+    // parseInt(variable) -> pasaba de string a number.
+
+    // if(A == 'A' && (B == 'B' || .....))
+        /* if(true){
+            ....
+        }else if(condicion...) {
+            ....
+        }else if(otra condicion...){
+
+        }else{
+            
+        } */
+    // condicion ? .... : .... ;
+    // A == 'A' ? es verdadero : es falso;
+    // Operador ternario
+    /* var confirmaDatos = confirm("Desea continuar?");
+    var mensaje = (confirmaDatos == true) ? "Continua..." : "Se cierra pantalla";
+    alert(mensaje); */
+
+    </script> -->
+
+</html>
