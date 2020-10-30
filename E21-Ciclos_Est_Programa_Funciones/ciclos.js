@@ -9,6 +9,15 @@ for (var i = 10; i > 0; i--) {
         console.log(i + " ovejas");
     }
 }
+/*ciclo FOR para contar de 1 a 10*/
+console.log("CICLO FOR:");
+for (var i = 0; i <= 10; i++) {
+    if (i === 1) {
+        console.log(i + " oveja");
+    } else {
+        console.log(i + " ovejas");
+    }
+}
 
 /*ciclos while y do while, comparación de casos similares*/
 /*DO WHILE*/

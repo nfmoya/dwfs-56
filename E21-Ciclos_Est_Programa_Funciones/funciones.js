@@ -32,3 +32,13 @@ function esNumero(numero){
     return !isNaN(numero);
 }
 
+
+function nombre_de_mi_funcion(numero, palabra){
+   console.log(numero);
+   console.log(palabra);
+
+   return "Numero: "+ numero + " - Palabra: "+ palabra;
+}
+
+let mifuncion = nombre_de_mi_funcion(1, "dwfs56");
+console.log(mifuncion);

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays-Scope</title>
+</head>
+
+<body>
+
+    <script>
+        // SCOPE:
+        /*scope - var, let y const*/
+        var var_test = "hola global";
+        if (true) {
+            var var_test = "hola, desde el if";
+        }
+        alert(var_test);
+
+        let let_test = "hola global";
+        if (true) {
+            let let_test = "hola, desde if";
+        }
+        alert(let_test);
+
+        const CONST_TEST = "hola global";
+        if (true) {
+            const CONST_TEST = "hola, desde el if";
+        }
+        alert(CONST_TEST);
+
+
+        /*reasignación de valor de variables*/
+        var color = '#f00';
+        color = 'red';
+        console.log(color);
+
+        let color2 = '#f00';
+        color2 = 'red';
+        console.log(color2);
+
+        const COLOR_RED = '#f00';
+        //COLOR_RED = 'red'; // descomentar esta línea para mostrar error que da la reasignación de una constante
+        console.log(COLOR_RED);
+    </script>
+</body>
+
+</html>
