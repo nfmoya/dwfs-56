@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h1>Objetos</h1>
+    <p>Abra la consola</p>
+    <script>
+        /* Programemos juntos una clase que tenga las propiedades de nombre, 
+            apellido y edad con los siguientes métodos:
+            fullname: debe retornar el nombre y apellido concatenados con un espacio entre ambos
+            es_mayor: debe retornar true o false dependiendo si la persona es mayor de edad o no */
+
+        class Persona {
+            // Metodo constructor
+            constructor(nombre, apellido, edad) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+            }
+            // Metodos
+            fullname() {
+                return this.nombre + " " + this.apellido;
+            }
+
+            es_mayor() {
+                // If ternario
+                return (this.edad >= 18) ? 'SI' : 'NO';
+            }
+        }
+        let nombre = prompt("Ingrese nombre:");
+        let apellido = prompt("Ingrese apellido:");
+        let edad = prompt("Ingrese edad:");
+
+        // Creando objeto a partir de una clase. (Instanciar una clase)
+        let p1 = new Persona(nombre, apellido, edad);
+        alert("FULLNAME: "+ p1.fullname());
+        alert("Es mayor? : "+ p1.es_mayor());
+
+    </script>
+</body>
+
+</html>
