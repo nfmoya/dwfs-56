@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays-Scope</title>
+</head>
+
+<body>
+
+    <script>
+        /* Ingresar mediante prompt cualquier carácter hasta el ingreso de un 0 (cero).
+        Almacenar cada ingreso en una posición del array.
+        Al finalizar dividir la cantidad de elementos en 3 arrays iguales 
+        Si sobra un elemento eliminar el primero
+        Si sobran dos elementos eliminar el primero y el último
+        */
+        var datos = [];
+
+        let datoIngresado = prompt('Ingrese un dato:');
+
+        while (datoIngresado != '0') {
+            datos.push(datoIngresado);
+            datoIngresado = prompt('Ingrese un dato:');
+        }
+
+ /*        let datosSplit1 = [];
+        let datosSplit2 = [];
+        let datosSplit3 = [];
+ */
+        if (datos.length < 3) {
+            alert("No es posible dividir en 3 el array ya que no hay la cantidad suficiente de elementos");
+        } else {
+            // Se remueven del array los extremos si no son multiplos de 3.
+            // % (modulo) devuelve el resto de una division. Para que sea multiplo debe ser 0, sino devuelve el resto
+            switch (datos.length % 3) {
+                case 1:
+                    datos.shift();
+                    break;
+                case 2:
+                    datos.shift();
+                    datos.pop();
+                    break
+                default:
+                    break
+            }
+
+            let tercio = datos.length / 3;
+            let tercio2 = tercio + tercio;
+            let tercio3 = tercio2 + tercio; // ó datos.length
+
+            let datosSplit1 = splitArrayData(0, tercio, datos);
+            let datosSplit2 = splitArrayData(tercio, tercio2, datos);
+            let datosSplit3 = splitArrayData(tercio2, tercio3, datos);
+
+            console.log(datosSplit1);
+            console.log(datosSplit2);
+            console.log(datosSplit3);
+        }
+
+        /* 
+        Funcion para splitear valores de un array. 
+        Devolviendo otro array con ése split.
+        Parametros: 
+         - inicio -> desde que indice se quiere iniciar.
+         - hasta -> hasta que indice se quiere recorrer.
+         - array -> es el array a splitear.
+        Esta función faltaría validar que: 
+         - Todos los parametros no nulos ni indefinidos
+         - 'inicio'<'hasta' y 'hasta' < longitud array. 
+         */
+        function splitArrayData(inicio, hasta, array) {
+            let results = [];
+            for (let i = inicio; i < hasta; i++) {
+                results.push(array[i]);
+            }
+            return results;
+        }
+    </script>
+</body>
+
+</html>
