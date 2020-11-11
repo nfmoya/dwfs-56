@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #000;
+}
+
+header nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+header nav ul li {
+    padding: 0 20px;
+}
+
+header nav ul li:last-child {
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main {
+    padding: 50px;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.heading-message {
+    width: 50%;
+    text-align: center;
+}
+
+.heading-img {
+    width: 50%;
+    text-align: center;
+}
+
+.img-content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 80px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+button {
+    background-color: green;
+    font-size: 12px;
+    padding: 10px 24px;
+    width: 30%;
+}

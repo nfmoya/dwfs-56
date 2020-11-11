@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <script>
+        /* Pide al usuario estos 4 datos: Nombre y apellido, Background color, Font color, Font size
+                Dibuja un cuadrado con el nombre y apellido en el centro y aplica las propiedades que solicitaste modificando el DOM.*/
+
+        let box = document.getElementById('box');
+
+        let nombre = prompt('Ingrese nombre y apellido');
+        let colorFondo = prompt('Qué color de fondo quiere?');
+        let colorTexto = prompt('Qué color de texto quiere?');
+        let tamanioFuente = prompt('Qué tamaño?');
+
+        let h1 = document.createElement('h1');
+
+        // 
+        h1.textContent = 'Hola soy: ' + nombre;
+        h1.style.color = colorTexto;
+        h1.style.fontSize = tamanioFuente + 'px';
+
+        box.style.backgroundColor = colorFondo;
+
+        box.appendChild(h1);
+    </script>
+</body>
+
+</html>

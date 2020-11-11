@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <h1>Listado de Personas: </h1>
+    <section id="listadoPersonas">
+
+    </section>
+    <script>
+        class Persona {
+            // Metodo constructor
+            constructor(nombre, apellido, edad) {
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                    this.edad = edad;
+                }
+                // Metodos
+            fullname() {
+                return this.nombre + " " + this.apellido;
+            }
+
+            es_mayor() {
+                // If ternario
+                return (this.edad >= 18) ? 'SI' : 'NO';
+            }
+        }
+
+        let personas = [new Persona('Albert', 'Einstein', 78), new Persona('Mirko', 'Marley', 3)];
+
+        // Obtengo el elemento section de mi html
+        let seccionPersonas = document.getElementById('listadoPersonas');
+
+        for (let i = 0; i < personas.length; i++) {
+            // Se crean los parrafos para cada valor del objeto 
+
+            let parrafoNombre = document.createElement('p');
+            let parrafoEdad = document.createElement('p');
+            let parrafoMayor = document.createElement('p');
+
+            // Agrego el texto a cada parrafo
+            parrafoNombre.innerHTML = 'FullName: ' + personas[i].fullname();
+            parrafoEdad.innerHTML = "Edad: " + personas[i].edad;
+            parrafoMayor.innerHTML = "Es mayor de Edad?: " + personas[i].es_mayor();
+
+            parrafoEdad.style.color = 'blue';
+
+            // Se agrega cada parrafo al section
+            seccionPersonas.appendChild(parrafoNombre);
+            seccionPersonas.appendChild(parrafoEdad);
+            seccionPersonas.appendChild(parrafoMayor);
+        }
+    </script>
+</body>
+
+</html>
