@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+    <h1>Nombres:
+        <p id="nombre">MY NAME</p>
+    </h1>
+
+    <script>
+        // localStorage
+        // agrega un valor a localStorage
+        localStorage.setItem('nombre', 'Harry');
+
+        // acceder al un valor del localStorage.
+        console.log('Nombre: ' + localStorage.getItem('nombre'));
+
+        // remover un valor a localStorage
+        localStorage.removeItem('nombre');
+
+        //  localStorage.setItem('nombreEntero', 'Harry Potter');
+        // console.log('El nombre alojado en el localStorage es: ' + localStorage.getItem('nombreEntero'));
+    </script>
+</body>
+
+</html>
