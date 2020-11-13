@@ -23,8 +23,28 @@
         // remover un valor a localStorage
         localStorage.removeItem('nombre');
 
-        //  localStorage.setItem('nombreEntero', 'Harry Potter');
-        // console.log('El nombre alojado en el localStorage es: ' + localStorage.getItem('nombreEntero'));
+        let myArray = ['Mike', 'Nacho'];
+        localStorage.setItem('arrayNombres', myArray);
+
+        let myArrayFromLS = localStorage.getItem("arrayNombres");
+        console.log(myArrayFromLS);
+        console.log(typeof(myArrayFromLS));
+
+        // sessionStorage
+        // setItem, getItem y removeItem
+
+        sessionStorage.setItem('nombre', 'Hermione');
+        // acceder al un valor del localStorage.
+        console.log('Nombre del SESSION STORAGE: ' + sessionStorage.getItem('nombre'));
+
+        sessionStorage.removeItem('nombre');
+
+        //  
+        localStorage.setItem('mago', 'Harry Potter');
+        let mago = localStorage.getItem('mago');
+
+        let parrafo = document.getElementById('nombre');
+        parrafo.innerHTML = mago;
     </script>
 </body>
 
