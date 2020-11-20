@@ -69,15 +69,15 @@ subitemList.addEventListener('click', (event) => {
             event.target.children[0].style.display = "block";
         }
     }
-    if (event.which === 1) {
-        alert("Boton izq");
-    }
-    if (event.which === 2) {
-        alert("Boton medio");
-    }
-    if (event.which === 3) {
-        alert("Boton derecho");
-    }
+    /*  if (event.button === 1) {
+         alert("Boton izq");
+     }
+     if (event.button === 2) {
+         alert("Boton medio");
+     }
+     if (event.button === 3) {
+         alert("Boton derecho");
+     } */
 });
 
 //.stopPropagation()
