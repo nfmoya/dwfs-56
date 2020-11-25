@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="search"> <button id="buscar">Buscar</button>
+    <br>
+
+    <img src="" id="migif" alt="">
+    <br>
+    <h1 id="followersTitle"></h1>
+
+    <script>
+        // Busqueda a api giphy a partir de un input desde el html.
+        const KEY = "Z70u5JhuB3S7jkVDKZND8XEGjEpjsuwF";
+
+        function searchGif(query) {
+            fetch("https://api.giphy.com/v1/gifs/search?api_key=" + KEY + "&q=" + query + "&limit=10")
+                .then(response => response.json())
+                .then(json => {
+                    console.log(json.data[0]);
+                    let img = document.getElementById("migif");
+                    img.setAttribute('src', json.data[0].images.downsized.url);
+                });
+        }
+
+        let boton = document.getElementById("buscar");
+        boton.addEventListener("click", () => {
+            let query = document.getElementById('search');
+
+            searchGif(query.value);
+        });
+    </script>
+    <script src="giphy.js"></script>
+</body>
+
+</html>
