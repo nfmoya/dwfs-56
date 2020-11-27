@@ -1,0 +1,14 @@
+{
+    "Nombre": "Lionel",
+    "Apellido": "Messi",
+    "Edad": 32,
+    "Hijos": [
+        "Mateo",
+        "Thiago",
+        "Ciro"
+    ],
+    "Auto": {
+        "Marca": "VMW",
+        "Modelo": 2050
+    }
+}

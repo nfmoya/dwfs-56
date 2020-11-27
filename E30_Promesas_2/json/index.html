@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<h1>Json</h1>
+<p>JavaScript Object Notation o Notación de Objeto de JavaScript es un formato ligero de intercambio de datos.
+</p>
+<p>
+    Sus características son:
+    <ul>
+        <li>Fácil lectura por el humano</li>
+        <li> Ligero de peso</li>
+        <li>Fácilmente “parseable” </li>
+        <li>No permite almacenar funciones</li>
+        <li>Sintaxis similar a la de objetos y arreglos de JavaScript</li>
+    </ul>
+</p>
+<h1>¿Para qué sirve?</h1>
+
+<p>Al momento de transferir información, por ejemplo, de un servidor a un cliente y viceversa, se necesita un formato estandarizado que se pueda entender fácilmente, y sobre todo que sea ligero. Allí es cuando entra en juego el JSON.
+</p>
+
+<h1>Estructura:</h1>
+
+<p>Ver archivo xample.json
+</p>
+
+<body>
+
+    <script>
+        // Objeto en javascript
+        const messi = {
+            Nombre: "Lionel",
+            Apellido: "Messi",
+            Edad: 32,
+            Hijos: ["Mateo", "Thiago", "Ciro"],
+            Auto: {
+                Marca: "VMW",
+                Modelo: 2050
+            }
+        }
+
+        // Convertir objeto a json.
+        console.log("OBJETO:");
+        console.log(messi);
+        let jsonCreated = JSON.stringify(messi);
+        console.log("Object to Json:");
+        console.log(typeof(jsonCreated));
+        console.log(jsonCreated);
+
+        // Convertir json a objeto.
+        let messiFromJson = JSON.parse(jsonCreated);
+        console.log("Json to Object:");
+        console.log(typeof(messiFromJson));
+        console.log(messiFromJson);
+        console.log("Messi tiene un auto: " + messiFromJson.Auto.Marca);
+        console.log("********************************************************");
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
